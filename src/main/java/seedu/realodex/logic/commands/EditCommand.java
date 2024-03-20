@@ -1,6 +1,7 @@
 package seedu.realodex.logic.commands;
 
 import static java.util.Objects.requireNonNull;
+
 import static seedu.realodex.logic.parser.CliSyntax.PREFIX_ADDRESS;
 import static seedu.realodex.logic.parser.CliSyntax.PREFIX_EMAIL;
 import static seedu.realodex.logic.parser.CliSyntax.PREFIX_FAMILY;
@@ -8,6 +9,7 @@ import static seedu.realodex.logic.parser.CliSyntax.PREFIX_INCOME;
 import static seedu.realodex.logic.parser.CliSyntax.PREFIX_NAME;
 import static seedu.realodex.logic.parser.CliSyntax.PREFIX_PHONE;
 import static seedu.realodex.logic.parser.CliSyntax.PREFIX_TAG;
+import static seedu.realodex.logic.parser.CliSyntax.PREFIX_REMARK;
 import static seedu.realodex.model.Model.PREDICATE_SHOW_ALL_PERSONS;
 
 import java.util.Collections;
@@ -50,17 +52,21 @@ public class EditCommand extends Command {
             + "[" + PREFIX_EMAIL + "EMAIL] "
             + "[" + PREFIX_ADDRESS + "ADDRESS] "
             + "[" + PREFIX_FAMILY + "FAMILY] "
-            + "[" + PREFIX_TAG + "TAG]...\n"
+            + "[" + PREFIX_TAG + "TAG]"
+            + "[" + PREFIX_REMARK + "REMARK]\n"
             + "Example: " + COMMAND_WORD + " 1 "
             + PREFIX_PHONE + "91234567 "
             + PREFIX_EMAIL + "johndoe@example.com";
 
-    public static final String MESSAGE_EDIT_HELP = "Edit Command: (Coming soon)\n"
-            + "Format: (Coming soon)\n";
+    public static final String MESSAGE_EDIT_HELP = "Edit Command: Edits a client's particulars through their "
+            + "index number shown in the list.\n"
+            + "Format: edit INDEX NUMBER [n/NAME] [p/PHONE] [i/INCOME] [e/EMAIL] [a/ADDRESS] [f/FAMILY] "
+            + "[t/TAG] [r/REMARK]\n"
+            + "Example: edit 3 n/John e/john@gmail.com f/5\n";
 
     public static final String MESSAGE_EDIT_PERSON_SUCCESS = "Edited Client: %1$s";
     public static final String MESSAGE_NOT_EDITED = "At least one field to edit must be provided.";
-    public static final String MESSAGE_DUPLICATE_PERSON = "This client already exists in the Realodex.";
+    public static final String MESSAGE_DUPLICATE_PERSON = "This client already exists in Realodex.";
 
     private final Index index;
     private final EditPersonDescriptor editPersonDescriptor;
@@ -178,7 +184,7 @@ public class EditCommand extends Command {
          * Returns true if at least one field is edited.
          */
         public boolean isAnyFieldEdited() {
-            return CollectionUtil.isAnyNonNull(name, phone, income, email, address, family, tags);
+            return CollectionUtil.isAnyNonNull(name, phone, income, email, address, family, tags, remark);
         }
 
         public void setName(Name name) {
@@ -272,7 +278,8 @@ public class EditCommand extends Command {
                     && Objects.equals(email, otherEditPersonDescriptor.email)
                     && Objects.equals(address, otherEditPersonDescriptor.address)
                     && Objects.equals(family, otherEditPersonDescriptor.family)
-                    && Objects.equals(tags, otherEditPersonDescriptor.tags);
+                    && Objects.equals(tags, otherEditPersonDescriptor.tags)
+                    && Objects.equals(remark, otherEditPersonDescriptor.remark);
         }
 
         @Override
@@ -285,6 +292,7 @@ public class EditCommand extends Command {
                     .add("address", address)
                     .add("family", family)
                     .add("tags", tags)
+                    .add("remark", remark)
                     .toString();
         }
     }
