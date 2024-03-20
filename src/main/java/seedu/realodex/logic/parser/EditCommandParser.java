@@ -11,7 +11,6 @@ import static seedu.realodex.logic.parser.CliSyntax.PREFIX_PHONE;
 import static seedu.realodex.logic.parser.CliSyntax.PREFIX_REMARK;
 import static seedu.realodex.logic.parser.CliSyntax.PREFIX_TAG;
 
-
 import seedu.realodex.commons.core.index.Index;
 import seedu.realodex.logic.commands.EditCommand;
 import seedu.realodex.logic.commands.EditCommand.EditPersonDescriptor;
