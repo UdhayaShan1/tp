@@ -96,6 +96,14 @@ public class RealodexParserTest {
         HelpCommand expected = new HelpCommand("add");
         assertEquals(parser.parseCommand("add help"), expected);
     }
+
+    @Test
+    public void parseCommand_clear_help() throws Exception {
+        assertTrue(parser.parseCommand("clear help") instanceof HelpCommand);
+        HelpCommand expected = new HelpCommand("clear");
+        assertEquals(parser.parseCommand("clear help"), expected);
+    }
+
     @Test
     public void parseCommand_delete_help() throws Exception {
         assertTrue(parser.parseCommand("delete help") instanceof HelpCommand);
