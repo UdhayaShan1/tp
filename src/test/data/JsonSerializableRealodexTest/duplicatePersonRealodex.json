@@ -7,6 +7,7 @@
     "address": "123, Jurong West Ave 6, #08-111",
     "family" : "4",
     "tags": [ "buyer" ],
+    "housingType": "HDB" ,
     "remark" : "this is a remark",
     "birthday" : "01May2023"
   }, {
@@ -16,6 +17,7 @@
     "email": "pauline@example.com",
     "family" : "4",
     "address": "4th street",
+    "housingType": "Condominium" ,
     "tags": [ "buyer" ],
     "birthday" : "01May2023"
   } ]

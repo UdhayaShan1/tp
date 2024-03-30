@@ -318,13 +318,13 @@ public class AddCommandParserTest {
         // missing name prefix
         assertParseFailure(parser,
                            VALID_NAME_BOB_FIRST_LETTER_CAPS + PHONE_DESC_BOB + INCOME_DESC_BOB + EMAIL_DESC_BOB
-                                   + ADDRESS_DESC_BOB + FAMILY_DESC_BOB + TAG_DESC_BOB,
+                                   + ADDRESS_DESC_BOB + FAMILY_DESC_BOB + TAG_DESC_BOB + HOUSINGTYPE_DESC_BOB,
                            MESSAGE_MISSING_PREFIXES + "n/NAME\n" + expectedCommandFormatMessage);
 
         // missing phone prefix
         assertParseFailure(parser,
                            NAME_DESC_BOB + VALID_PHONE_BOB + INCOME_DESC_BOB
-                                   + EMAIL_DESC_BOB + ADDRESS_DESC_BOB + FAMILY_DESC_BOB + TAG_DESC_BOB,
+                                   + EMAIL_DESC_BOB + ADDRESS_DESC_BOB + FAMILY_DESC_BOB + TAG_DESC_BOB + HOUSINGTYPE_DESC_BOB,
                            MESSAGE_MISSING_PREFIXES + "p/PHONE\n" + expectedCommandFormatMessage);
 
         // missing income prefix
@@ -336,7 +336,7 @@ public class AddCommandParserTest {
         // missing email prefix
         assertParseFailure(parser,
                            NAME_DESC_BOB + PHONE_DESC_BOB + INCOME_DESC_BOB
-                                   + VALID_EMAIL_BOB + ADDRESS_DESC_BOB + FAMILY_DESC_BOB + TAG_DESC_BOB,
+                                   + VALID_EMAIL_BOB + ADDRESS_DESC_BOB + FAMILY_DESC_BOB + TAG_DESC_BOB + HOUSINGTYPE_DESC_BOB,
                            MESSAGE_MISSING_PREFIXES + "e/EMAIL\n" + expectedCommandFormatMessage);
 
         // missing address prefix

@@ -29,6 +29,11 @@ public class HousingTypeTest {
         assertFalse(HousingType.isValidHousingType("HDBB")); // Does not match any housing type
         assertFalse(HousingType.isValidHousingType("HDB ")); // Extra space at the end
         assertFalse(HousingType.isValidHousingType("H DB")); // Space within the tag name
+        assertFalse(HousingType.isValidHousingType("H DB"));
+        assertFalse(HousingType.isValidHousingType("C"));
+        assertFalse(HousingType.isValidHousingType("GCB"));
+        assertFalse(HousingType.isValidHousingType("CONDO"));
+
 
         // Valid housing types
         assertTrue(HousingType.isValidHousingType("hdb"));

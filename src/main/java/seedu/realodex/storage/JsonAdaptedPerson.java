@@ -29,7 +29,6 @@ import seedu.realodex.model.tag.Tag;
 class JsonAdaptedPerson {
 
     public static final String MISSING_FIELD_MESSAGE_FORMAT = "Person's %s field is missing!";
-
     private final String name;
     private final String phone;
     private final String income;
@@ -64,7 +63,7 @@ class JsonAdaptedPerson {
         if (tags != null) {
             this.tags.addAll(tags);
         }
-        this.housingType = Objects.requireNonNullElse(housingType, "");;
+        this.housingType = housingType;
         this.remark = Objects.requireNonNullElse(remark, "");
         this.birthday = birthday;
     }
