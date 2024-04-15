@@ -20,7 +20,7 @@ Some of the NFRs are inspired by [Pawfection](https://ay2324s1-cs2103t-f08-3.git
 
 ## **Setting up, getting started**
 
-Refer to the guide [_Setting up and getting started_](SettingUp.md).
+Refer to the guide [_Setting up and getting started_](#setting-up-getting-started).
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -261,7 +261,7 @@ Specific field constraints are described below. They are designed with the users
     * have each domain label start and end with alphanumeric characters
     * have each domain label consist of alphanumeric characters, separated only by hyphens, if any.
 * `ADDRESS`:
-  * String
+  * Represented as String
 * `FAMILY`:
   * Should be an integer greater than 1.
 * `TAG`:
@@ -615,8 +615,6 @@ This is implemented using the `HousingTypeMatchPredicate` that checks whether a 
 #### Example Usage Scenario
 1. The user inputs `filter h/Condominium`, intending to filter the list of persons to only include those with a "Condominium" housing type preference.
 2. The UI reflects the filtered list with persons who have a "Condominium" housing type preference.
-
-#### Design considerations
 
 --------------------------------------------------------------------------------------------------------------------
 
