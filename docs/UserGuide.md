@@ -579,16 +579,16 @@ Deletes the client of the specified `INDEX`.
 
 <p align="center">
   <a href="images/delete/before_execute_deleteindex.png">
-  <img src="images/delete/before_execute_deleteindex.png" alt="before execute delete index" style="width:90%"> 
+  <img src="images/delete/before_execute_deleteindex.png" alt="before execute delete name" style="width:100%">
   </a>
-  <em> Client list before entering command <code>delete 3</code></em>
+  <em>Client list before entering command <code>delete 3</code></em>
 </p>
 
 <p align="center">
-  <a href="images/delete/after_execute_deleteindex.png"> 
-  <img src="images/delete/after_execute_deleteindex.png" alt="after execute delete index" style="width:90%"> 
+  <a href="images/delete/after_execute_deleteindex.png">
+  <img src="images/delete/after_execute_deleteindex.png" alt="after execute delete name" style="width:100%">
   </a>
-  <em> Client list after entering command <code>delete 3</code></em>
+  <em>Client list after entering command <code>delete 3</code></em>
 </p>
 
 
@@ -650,6 +650,7 @@ Deletes the client of the specified `INDEX`.
   <a href="images/edit/after_execute_edit.png">
     <img src="images/edit/after_execute_edit.png" alt="after execute edit" style="width:80%">
   </a>
+
 </div>
 <div style="text-align: center; margin-top: 0;">
   <em>Client list after entering command <code>edit 2 n/Kylie i/3333 f/5</code></em>
