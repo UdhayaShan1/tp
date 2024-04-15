@@ -616,8 +616,6 @@ This is implemented using the `HousingTypeMatchPredicate` that checks whether a 
 1. The user inputs `filter h/Condominium`, intending to filter the list of persons to only include those with a "Condominium" housing type preference.
 2. The UI reflects the filtered list with persons who have a "Condominium" housing type preference.
 
-#### Design considerations
-
 --------------------------------------------------------------------------------------------------------------------
 
 <div style="page-break-after: always;"></div>
